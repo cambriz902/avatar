@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 
-
+# Devise gem for users
+gem 'devise', '~> 3.4.0'
 # Bootstrap
 gem 'bootstrap-sass'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets
