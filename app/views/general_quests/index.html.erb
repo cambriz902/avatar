@@ -1,0 +1,23 @@
+<%= link_to 'Add Quest', new_general_quest_path %>
+<% questNumber = 1 %>
+<% @quests.each do |quest| %>
+	<h4>Quest <%= questNumber %></h4>
+
+	<p>
+		Category: <%= quest.category %> <br />
+		Title: <%= quest.title %> <br />
+		Descripttion: <%= quest.description %> <br />
+		Experience: <%= quest.experience %> <br />
+		<% if quest.available %>
+			Available: <%= "Yes" %>
+		<% else %>
+			Available: <%= "No" %>
+		<% end %>
+		<br />
+		<%= link_to 'Edit', edit_general_quest_path(quest) %>  
+		<%= link_to 'Delete', quest, method: :delete %> <br />
+		
+	</p>
+	<% questNumber += 1 %>
+<% end %>
+

@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118213304) do
+ActiveRecord::Schema.define(version: 20150119030412) do
+
+  create_table "general_quests", force: :cascade do |t|
+    t.string   "category"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "experience"
+    t.boolean  "available"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
