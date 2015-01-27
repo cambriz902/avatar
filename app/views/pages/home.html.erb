@@ -16,29 +16,39 @@
 			</li>
 		</ul>
 		<div id="myTabContent" class="tab-content">
-			<div class="tab-pane fade" id="health">
+			<div id="wrapper">
+				<div class="tab-pane fade" id="health">
 					<% @healthQuests.each do |quest| %>
-					<h3> <%= quest.title %> </h3>
-					<p> <%= quest.description %> </p>
+						<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
+						<div class="accContainer">
+							<p> <%= quest.description %> </p>
+						</div>
 					<% end %>
-			</div>
-			<div class="tab-pane fade" id="stamina">
+				</div>
+				<div class="tab-pane fade" id="stamina">
 					<% @staminaQuests.each do |quest| %>
-					<h3> <%= quest.title %> </h3>
-					<p> <%= quest.description %> </p>
+						<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
+						<div class="accContainer">
+							<p> <%= quest.description %> </p>
+						</div>
 					<% end %>
-			</div>
-			<div class="tab-pane fade" id="strength">
+				</div>
+				<div class="tab-pane fade" id="strength">
 					<% @strengthQuests.each do |quest| %>
-					<h3> <%= quest.title %> </h3>
-					<p> <%= quest.description %> </p>
+						<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
+						<div class="accContainer">
+							<p> <%= quest.description %> </p>
+						</div>
 					<% end %>
-			</div>
-			<div class="tab-pane fade" id="intelligence">
+				</div>
+				<div class="tab-pane fade" id="intelligence">
 					<% @intelligenceQuests.each do |quest| %>
-					<h3> <%= quest.title %> </h3>
-					<p> <%= quest.description %> </p>
+						<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
+						<div class="accContainer">
+							<p> <%= quest.description %> </p>
+						</div>
 					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
