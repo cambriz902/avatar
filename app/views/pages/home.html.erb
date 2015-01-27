@@ -3,72 +3,45 @@
 	<div class= "bs-docs-example">
 		<ul id="myTab" class="nav nav-tabs">
 			<li class>
-				<a href="#health" data-toggle="tab">Health Daylies</a>
+				<a href="#health" data-toggle="tab">Health</a>
 			</li>
 			<li class>
-				<a href="#stamina" data-toggle="tab">Stamina Daylies</a>
+				<a href="#stamina" data-toggle="tab">Stamina</a>
 			</li>
 			<li class>
-				<a href="#strength" data-toggle="tab">Strength Daylies</a>
+				<a href="#strength" data-toggle="tab">Strength</a>
 			</li>
 			<li class>
-				<a href="#intelligence" data-toggle="tab">Intelligence Daylies</a>
+				<a href="#intelligence" data-toggle="tab">Intelligence</a>
 			</li>
-			<!--
-			<li  class="dropdown active">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					"DropDown "
-					<b class="caret"></b>
-				</a>
-				<ul class="dropdown-menu">
-					<li class>
-						<a hrf="#dropdown1" data-toggle="tab">@fat</a>
-					</li>
-					<li class="active">
-						<a href="#dropdown2" data-toggle="tab">@mdo</a>
-					</li>
-				</ul>
-			</li>
-		-->
 		</ul>
 		<div id="myTabContent" class="tab-content">
 			<div class="tab-pane fade" id="health">
-				<p>
-					dklafhaignagoagaiognaogaiogoiagaghag
-				</p>
+					<% @healthQuests.each do |quest| %>
+					<h3> <%= quest.title %> </h3>
+					<p> <%= quest.description %> </p>
+					<% end %>
 			</div>
 			<div class="tab-pane fade" id="stamina">
-				<p>
-					bbbbbbbbbbbbbbbbbbbbbbbbb
-				</p>
+					<% @staminaQuests.each do |quest| %>
+					<h3> <%= quest.title %> </h3>
+					<p> <%= quest.description %> </p>
+					<% end %>
 			</div>
 			<div class="tab-pane fade" id="strength">
-				<p>
-					ccccccccccccccccccccccccccc
-				</p>
+					<% @strengthQuests.each do |quest| %>
+					<h3> <%= quest.title %> </h3>
+					<p> <%= quest.description %> </p>
+					<% end %>
 			</div>
 			<div class="tab-pane fade" id="intelligence">
-				<p>
-					dddddddddddddddddddddddd
-				</p>
+					<% @intelligenceQuests.each do |quest| %>
+					<h3> <%= quest.title %> </h3>
+					<p> <%= quest.description %> </p>
+					<% end %>
 			</div>
-			<!--
-			<div class="tab-pane fade" id="dropdown1">
-				<p>
-					cccccccccccccccccccccccc
-				</p>
-			</div>
-			<div class="tab-pane fade active in" id="dropdown2">
-				<p>
-					ddddddddddddddddddddddddd
-				</p>
-			</div>
-			-->
-
 		</div>
 	</div>
-
-
 <% else %>
 	<div class="jumbotron center">
 	  <h1>Welcome to my app!</h1>
