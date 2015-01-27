@@ -1,7 +1,7 @@
 $(function() {
 
 		$('.accContainer').hide(); // hide all contents
-		//$('.accordion:first').next().slideDown(); //show first instance of contents
+		//$('.accContainer:first').slideDown(); //show first instance of contents
 
 		
 	  $('.accordion').click(function (){
