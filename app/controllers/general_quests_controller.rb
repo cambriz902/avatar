@@ -3,7 +3,7 @@ class GeneralQuestsController < ApplicationController
 		# will have template
 		@quests = GeneralQuest.all
 	end
-	
+
 	def new # display the for new record
 		# will have template
 		@quest = GeneralQuest.new
@@ -45,8 +45,13 @@ class GeneralQuestsController < ApplicationController
 		redirect_to general_quests_path
 	end
 
+	def get_strength_quests
+		return GeneralQuest.where(category: "health")
+	end
+	
 	private 
 		def allowed_params
 			params.require(:general_quest).permit(:category, :title, :description, :experience, :available)
 		end
+
 end

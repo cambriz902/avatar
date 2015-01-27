@@ -1,11 +1,81 @@
-<div class="jumbotron center">
-     <h1>Welcome to my app!</h1>
-     <% if user_signed_in? %>
-          # do something
-     <% else %>
-       <p>
-         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-       </p>
-  <% end %>  
-</div>s
+<body>
+<% if user_signed_in? %>
+	<div class= "bs-docs-example">
+		<ul id="myTab" class="nav nav-tabs">
+			<li class>
+				<a href="#health" data-toggle="tab">Health Daylies</a>
+			</li>
+			<li class>
+				<a href="#stamina" data-toggle="tab">Stamina Daylies</a>
+			</li>
+			<li class>
+				<a href="#strength" data-toggle="tab">Strength Daylies</a>
+			</li>
+			<li class>
+				<a href="#intelligence" data-toggle="tab">Intelligence Daylies</a>
+			</li>
+			<!--
+			<li  class="dropdown active">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					"DropDown "
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li class>
+						<a hrf="#dropdown1" data-toggle="tab">@fat</a>
+					</li>
+					<li class="active">
+						<a href="#dropdown2" data-toggle="tab">@mdo</a>
+					</li>
+				</ul>
+			</li>
+		-->
+		</ul>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade" id="health">
+				<p>
+					dklafhaignagoagaiognaogaiogoiagaghag
+				</p>
+			</div>
+			<div class="tab-pane fade" id="stamina">
+				<p>
+					bbbbbbbbbbbbbbbbbbbbbbbbb
+				</p>
+			</div>
+			<div class="tab-pane fade" id="strength">
+				<p>
+					ccccccccccccccccccccccccccc
+				</p>
+			</div>
+			<div class="tab-pane fade" id="intelligence">
+				<p>
+					dddddddddddddddddddddddd
+				</p>
+			</div>
+			<!--
+			<div class="tab-pane fade" id="dropdown1">
+				<p>
+					cccccccccccccccccccccccc
+				</p>
+			</div>
+			<div class="tab-pane fade active in" id="dropdown2">
+				<p>
+					ddddddddddddddddddddddddd
+				</p>
+			</div>
+			-->
+
+		</div>
+	</div>
+
+
+<% else %>
+	<div class="jumbotron center">
+	  <h1>Welcome to my app!</h1>
+	  <p>
+	    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+	    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+	  </p>  
+	</div>
+<% end %>
+</body>
