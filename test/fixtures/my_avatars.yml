@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  health_xp: 1
+  stamina_xp: 1
+  strength_xp: 1
+  intelligence: 1
+  user_id: 1
+
+two:
+  health_xp: 1
+  stamina_xp: 1
+  strength_xp: 1
+  intelligence: 1
+  user_id: 1

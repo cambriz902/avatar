@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :my_avatars
+
   devise_for :users
   root 'pages#home'
 

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Health xp:</strong>
+  <%= @my_avatar.health_xp %>
+</p>
+
+<p>
+  <strong>Stamina xp:</strong>
+  <%= @my_avatar.stamina_xp %>
+</p>
+
+<p>
+  <strong>Strength xp:</strong>
+  <%= @my_avatar.strength_xp %>
+</p>
+
+<p>
+  <strong>Intelligence xp:</strong>
+  <%= @my_avatar.intelligence_xp %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @my_avatar.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_my_avatar_path(@my_avatar) %> |
+<%= link_to 'Back', my_avatars_path %>

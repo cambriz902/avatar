@@ -1,0 +1,37 @@
+<%= form_for(@my_avatar) do |f| %>
+  <% if @my_avatar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@my_avatar.errors.count, "error") %> prohibited this my_avatar from being saved:</h2>
+
+      <ul>
+      <% @my_avatar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :health_xp %><br>
+    <%= f.number_field :health_xp %>
+  </div>
+  <div class="field">
+    <%= f.label :stamina_xp %><br>
+    <%= f.number_field :stamina_xp %>
+  </div>
+  <div class="field">
+    <%= f.label :strength_xp %><br>
+    <%= f.number_field :strength_xp %>
+  </div>
+  <div class="field">
+    <%= f.label :intelligence_xp %><br>
+    <%= f.number_field :intelligence_xp %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

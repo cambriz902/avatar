@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing My Avatars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Health xp</th>
+      <th>Stamina xp</th>
+      <th>Strength xp</th>
+      <th>Intelligence xp</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @my_avatars.each do |my_avatar| %>
+      <tr>
+        <td><%= my_avatar.health_xp %></td>
+        <td><%= my_avatar.stamina_xp %></td>
+        <td><%= my_avatar.strength_xp %></td>
+        <td><%= my_avatar.intelligence_xp %></td>
+        <td><%= my_avatar.user_id %></td>
+        <td><%= link_to 'Show', my_avatar %></td>
+        <td><%= link_to 'Edit', edit_my_avatar_path(my_avatar) %></td>
+        <td><%= link_to 'Destroy', my_avatar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New My avatar', new_my_avatar_path %>

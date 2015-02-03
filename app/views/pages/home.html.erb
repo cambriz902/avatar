@@ -1,5 +1,14 @@
 <body>
 <% if user_signed_in? %>
+<div id="avatar container">
+
+	<h2> Avatar </h2>
+		<p> <%= @myAvatar.health_xp %> </p>
+		<p> <%= @myAvatar.stamina_xp %> </p>
+		<p> <%= @myAvatar.strength_xp %> </p>
+		<p> <%= @myAvatar.intelligence_xp %> </p>
+</div>
+
 <div id="wrapper">
 	<div role="tabpanel">
 		<ul class="nav nav-tabs" role="tablist">
