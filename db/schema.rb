@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150128051553) do
+ActiveRecord::Schema.define(version: 20150207004619) do
 
   create_table "general_quests", force: :cascade do |t|
     t.string   "category"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150128051553) do
     t.integer  "user_id"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.string   "name"
   end
 
   add_index "my_avatars", ["user_id"], name: "index_my_avatars_on_user_id"

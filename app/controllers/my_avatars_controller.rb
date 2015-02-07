@@ -16,16 +16,14 @@ class MyAvatarsController < ApplicationController
   def new
       @my_avatar = MyAvatar.new
       respond_with(@my_avatar)
-    
   end
 
   def edit
   end
 
   def create
-   
-    
     @my_avatar = MyAvatar.new(my_avatar_params)
+    @my_avatar.user_id = current_user.id
     @my_avatar.save
     respond_with(@my_avatar)
   end
@@ -46,6 +44,7 @@ class MyAvatarsController < ApplicationController
     end
 
     def my_avatar_params
-      params.require(:my_avatar).permit(:health_xp, :stamina_xp, :strength_xp, :intelligence, :user_id)
+      params.require(:my_avatar).permit(:health_xp, :stamina_xp, :strength_xp, :intelligence, :user_id, :name)
     end
+
 end

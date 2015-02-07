@@ -11,25 +11,14 @@
     </div>
   <% end %>
 
+  <h4>Avatar Starting Experience</h4>
+    <p>Health = 0</p>
+    <p>Stamina = 0</p>
+    <p>Strength = 0</p>
+    <p>Intelligence = 0</p>
   <div class="field">
-    <%= f.label :health_xp %><br>
-    <%= f.number_field :health_xp %>
-  </div>
-  <div class="field">
-    <%= f.label :stamina_xp %><br>
-    <%= f.number_field :stamina_xp %>
-  </div>
-  <div class="field">
-    <%= f.label :strength_xp %><br>
-    <%= f.number_field :strength_xp %>
-  </div>
-  <div class="field">
-    <%= f.label :intelligence_xp %><br>
-    <%= f.number_field :intelligence_xp %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
   </div>
   <div class="actions">
     <%= f.submit %>
