@@ -9,7 +9,7 @@ gem 'rails', '4.2.0'
 # Paperclip gem for images
 gem 'paperclip', '~> 4.0'
 # AWS sdk gem to upload files
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
