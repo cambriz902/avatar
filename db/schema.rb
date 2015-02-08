@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150207004619) do
+ActiveRecord::Schema.define(version: 20150208001001) do
 
   create_table "general_quests", force: :cascade do |t|
     t.string   "category"
@@ -24,14 +24,18 @@ ActiveRecord::Schema.define(version: 20150207004619) do
   end
 
   create_table "my_avatars", force: :cascade do |t|
-    t.integer  "health_xp",       default: 0
-    t.integer  "stamina_xp",      default: 0
-    t.integer  "strength_xp",     default: 0
-    t.integer  "intelligence_xp", default: 0
+    t.integer  "health_xp",          default: 0
+    t.integer  "stamina_xp",         default: 0
+    t.integer  "strength_xp",        default: 0
+    t.integer  "intelligence_xp",    default: 0
     t.integer  "user_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "name"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "my_avatars", ["user_id"], name: "index_my_avatars_on_user_id"

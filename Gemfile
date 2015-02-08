@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
-
 # Devise gem for users
 gem 'devise', '~> 3.4.0'
 # Bootstrap
 gem 'bootstrap-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
+# Paperclip gem for images
+gem 'paperclip', '~> 4.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
