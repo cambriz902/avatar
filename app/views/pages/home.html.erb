@@ -2,7 +2,8 @@
 <% if user_signed_in? %>
 <div id="avatar container">
 
-	<h2> <%= @myAvatar.name %> </h2>
+	<h4> <%= @myAvatar.name %> </h4>
+		<%= image_tag @myAvatar.image.url(:thumb) %>
 		<p> Health = <%= @myAvatar.health_xp %> </p>
 		<p> Stamina = <%= @myAvatar.stamina_xp %> </p>
 		<p> Strength = <%= @myAvatar.strength_xp %> </p>

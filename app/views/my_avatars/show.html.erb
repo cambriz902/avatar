@@ -29,6 +29,9 @@
   <strong>Name:</strong>
   <%= @my_avatar.name %>
 </p>
-
+<p>
+  <strong>Avatar Image:</strong></br>
+  <%= image_tag @my_avatar.image.url(:medium) %>
+</p>
 <%= link_to 'Edit', edit_my_avatar_path(@my_avatar) %> |
 <%= link_to 'Back', my_avatars_path %>

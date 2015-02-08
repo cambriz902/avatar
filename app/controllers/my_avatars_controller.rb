@@ -44,7 +44,7 @@ class MyAvatarsController < ApplicationController
     end
 
     def my_avatar_params
-      params.require(:my_avatar).permit(:health_xp, :stamina_xp, :strength_xp, :intelligence, :user_id, :name)
+      params.require(:my_avatar).permit(:health_xp, :stamina_xp, :strength_xp, :intelligence, :user_id, :name, :image)
     end
 
 end
