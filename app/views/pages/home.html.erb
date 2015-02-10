@@ -4,10 +4,18 @@
 
 	<h4> <%= @myAvatar.name %> </h4>
 		<%= image_tag @myAvatar.image.url(:thumb) %>
-		<p> Health = <%= @myAvatar.health_xp %> </p>
-		<p> Stamina = <%= @myAvatar.stamina_xp %> </p>
-		<p> Strength = <%= @myAvatar.strength_xp %> </p>
-		<p> Intelligence = <%= @myAvatar.intelligence_xp %> </p>
+		<p> 
+			Health = <div class="health"><%= @myAvatar.health_xp %></div> 
+		</p>
+		<p> 
+			Stamina = <div class="stamina"><%= @myAvatar.stamina_xp %></div>
+		</p>
+		<p> 
+			Strength = <div class="strength"><%= @myAvatar.strength_xp %></div>
+		</p>
+		<p> 
+			Intelligence = <div class="intelligence"><%= @myAvatar.intelligence_xp %></div>
+		</p>
 	</div>
 <div id="wrapper">
 
@@ -32,6 +40,7 @@
 					<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
 					<div class="accContainer">
 						<p> <%= quest.description %> </p>
+						<%= link_to "complete", { action: "update_avatar_attribute", id: quest.id }, method: :put, remote: true,:format => 'js' %>
 					</div>
 				<% end %>
 			</div>
@@ -40,6 +49,7 @@
 					<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
 					<div class="accContainer">
 						<p> <%= quest.description %> </p>
+						<%= link_to "complete", { action: "update_avatar_attribute", id: quest.id }, method: :put, remote: true,:format => 'js' %>
 					</div>
 				<% end %>
 			</div>
@@ -48,6 +58,7 @@
 					<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
 					<div class="accContainer">
 						<p> <%= quest.description %> </p>
+						<%= link_to "complete", { action: "update_avatar_attribute", id: quest.id }, method: :put, remote: true,:format => 'js' %>
 					</div>
 				<% end %>
 			</div>
@@ -56,6 +67,7 @@
 					<h2 class="accordion"></a href="#"> <%= quest.title %> </a></h2>
 					<div class="accContainer">
 						<p> <%= quest.description %> </p>
+						<%= link_to "complete", { action: "update_avatar_attribute", id: quest.id }, method: :put, remote: true,:format => 'js' %>
 					</div>
 				<% end %>
 			</div>

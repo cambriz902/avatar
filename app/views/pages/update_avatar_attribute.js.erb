@@ -1,0 +1,14 @@
+<% case @category %>
+<% when "health" %>
+	console.log(<%= @new_exp %>);
+	$('.health').html(<%= @new_exp %>);
+<% when "stamina" %>
+	console.log(<%= @new_exp %>);
+	$('.stamina').html(<%= @new_exp %>);
+<% when "strength" %>
+	console.log(<%= @new_exp %>);
+	$('.strength').html(<%= @new_exp %>);
+<% else "intelligence" %>
+	console.log(<%= @new_exp %>);
+	$('.intelligence').html(<%= @new_exp %>);
+<% end %>
