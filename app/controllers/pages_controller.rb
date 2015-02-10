@@ -7,16 +7,10 @@ class PagesController < ApplicationController
   		@strengthQuests = GeneralQuest.where(category: "strength")
   		@intelligenceQuests = GeneralQuest.where(category: "intelligence")
 
-
   		unless User.find(current_user.id).my_avatar
   			redirect_to new_my_avatar_path
   		end
   		@myAvatar = User.find(current_user.id).my_avatar 
-      #@myAvatar.health_xp = 0;
-      #@myAvatar.stamina_xp = 0;
-      #@myAvatar.strength_xp = 0;
-      #@myAvatar.intelligence_xp = 0;
-      #@myAvatar.save
   	end
   end
 
@@ -24,6 +18,7 @@ class PagesController < ApplicationController
     @quest = GeneralQuest.find(params[:id])
     @category = @quest.category
     @avatar = User.find(current_user.id).my_avatar
+    @quest_title = @quest.title
     case @category
     when "health"
       @new_exp = @avatar.health_xp + @quest.experience

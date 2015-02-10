@@ -7,14 +7,6 @@ Rails.application.routes.draw do
   get "about" => "pages#about"
 
   put "/pages/:id/update_avatar_attribute" => "pages#update_avatar_attribute", as:"update_avatar_attribute"
-  #resources :pages do
-    #member do
-     # put :update_avatar_attribute
-    #end
-  #end
-
-
-#update_avatar_attribute_page PUT    /pages/:id/update_avatar_attribute(.:format) pages#update_avatar_attribute
 
   resources :general_quests
   # The priority is based upon order of creation: first created -> highest priority.
